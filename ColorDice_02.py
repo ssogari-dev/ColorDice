@@ -6,7 +6,6 @@ sum = 0 # 주사위 값 저장 (합산)
 while count <= credits: # 작동한 횟수가 전체 작동횟수이 될 때 까지
     dice = input()
     if dice == "RED" :
-        count += 1 # 작동한 횟수 1 증가
         break # 반복문 탈출 후 종료.
 
     elif dice == "BLUE" : 
@@ -18,22 +17,10 @@ while count <= credits: # 작동한 횟수가 전체 작동횟수이 될 때 까
         credits += 1 # 작동할 횟수 1 증가.
         count += 1 # 작동한 횟수 1 증가.
 
-    elif dice == "ORANGE" :
+    elif dice == "ORANGE" or dice == "GREEN" or dice == "PINK" :
         num = int(input())
         sum += num 
         credits += 1 
-        count += 1 
-
-    elif dice == "GREEN" :
-        num = int(input())
-        sum += num 
-        credits += 1 
-        count += 1 
-
-    elif dice == "PINK" :
-        num = int(input())
-        sum += num 
-        credits += 1
         count += 1 
 
     else : # 예외 처리 (색상이 올바르게 입력되지 않은 경우)
